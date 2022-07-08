@@ -1,0 +1,25 @@
+Projeto Web
+
+**Commandos**
+
+_Criação do projeto com vite_
+yarn create vite web --template react-ts
+
+_instalação do eslint como dependência de desenvolvimento_
+yarn add -D eslint
+yarn run eslint --init
+
+_Instalação do PostCSS e Autoprefixer como dependências de desenvolvimento_
+yarn add -D postcss autoprefixer
+
+_Instalação do Tailwindcss como dependência de desenvolvimento_
+yarn add -D tailwindcss
+yarn run tailwindcss init
+
+**Links**
+
+_Conteúdo programático_ => https://www.canva.com/design/DAFE04y4gCI/Tk_gEY9M2-dbr6EITmZoYg/view?utm_content=DAFE04y4gCI&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent
+
+_Projeto Figma_ => https://www.figma.com/file/2Ll2FtXbzRcW2TsZbcTzZp/Bunker?node-id=4%3A15
+
+_Protótipo_ => https://www.figma.com/proto/2Ll2FtXbzRcW2TsZbcTzZp/Bunker?page-id=4%3A15&node-id=7%3A155&viewport=355%2C526%2C0.08&scaling=min-zoom&starting-point-node-id=7%3A155&show-proto-sidebar=1

@@ -1,0 +1,12 @@
+{
+  "name": "alphabunker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rey",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev:web": "cd ./web && yarn dev",
+    "dev:server": "cd vite"
+  }
+}
