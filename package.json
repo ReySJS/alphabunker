@@ -6,7 +6,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev:web": "cd ./web && yarn dev",
-    "dev:server": "cd vite"
+    "dev:web": "cd ./web && yarn dev"
   }
 }
