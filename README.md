@@ -6,21 +6,21 @@
 
 ### Criação do projeto com vite
 
-yarn create vite web --template react-ts
+#### yarn create vite web --template react-ts
 
 ### instalação do eslint como dependência de desenvolvimento
 
-yarn add -D eslint
-yarn run eslint --init
+#### yarn add -D eslint
+#### yarn run eslint --init
 
 ### Instalação do PostCSS e Autoprefixer como dependências de desenvolvimento
 
-yarn add -D postcss autoprefixer
+#### yarn add -D postcss autoprefixer
 
 ### Instalação do Tailwindcss como dependência de desenvolvimento
 
-yarn add -D tailwindcss
-yarn run tailwindcss init
+#### yarn add -D tailwindcss
+#### yarn run tailwindcss init
 
 ## Links
 
