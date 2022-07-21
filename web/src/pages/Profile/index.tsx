@@ -1,3 +1,4 @@
+import { useUser } from '../../providers/UserProvider';
 /**
  * Archive: src/pages/Profile.tsx
  *
@@ -9,5 +10,6 @@
  */
 
 export const Profile = () => {
-  return <h1 className="text-white">Perfil</h1>;
+  const { user } = useUser();
+  return <h1 className="text-white">{user?.name}</h1>;
 };

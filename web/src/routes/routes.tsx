@@ -8,13 +8,14 @@ import { Transfer } from '../pages/Transfer';
 import { Deposit } from '../pages/Deposit';
 import { Withdraw } from '../pages/Withdraw';
 import { Profile } from '../pages/Profile';
+import { Transaction } from '../pages/Transaction';
 
 interface ChildrenTypes {
   children: ReactElement;
 }
 
 const Private = ({ children }: ChildrenTypes) => {
-  const { user, loading } = useUser();
+  const { user } = useUser();
 
   if (!user) {
     return <Navigate to="/home" />;
@@ -52,6 +53,8 @@ export const Router = () => (
         </Private>
       }
     />
+    <Route path="/transaction/:transactionId" element={<Transaction />} />
+
     <Route path="*" element={<h1 className="text-white">Error 404</h1>} />
   </Routes>
 );

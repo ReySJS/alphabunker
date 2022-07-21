@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import { UserProvider } from './providers/UserProvider';
@@ -14,10 +15,12 @@ import './styles/global.css';
  * Author: Rey
  */
 
-export const App = () => (
-  <BrowserRouter>
+export const App = () => {
+  return (
     <UserProvider>
-      <Router />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </UserProvider>
-  </BrowserRouter>
-);
+  );
+};

@@ -1,3 +1,4 @@
+import { useUser } from '../../providers/UserProvider';
 /**
  * Archive: src/pages/Home.tsx
  *
@@ -9,5 +10,7 @@
  */
 
 export const Home = () => {
+  const { loading } = useUser();
+
   return <h1 className="text-white">Login</h1>;
 };
