@@ -46,6 +46,38 @@ export const Router = () => (
       }
     />
     <Route
+      path="/deposit"
+      element={
+        <Private>
+          <Deposit />
+        </Private>
+      }
+    />
+    <Route
+      path="/extract"
+      element={
+        <Private>
+          <Extract />
+        </Private>
+      }
+    />
+    <Route
+      path="/Transfer"
+      element={
+        <Private>
+          <Transfer />
+        </Private>
+      }
+    />
+    <Route
+      path="/withdraw"
+      element={
+        <Private>
+          <Withdraw />
+        </Private>
+      }
+    />
+    <Route
       path="/profile"
       element={
         <Private>

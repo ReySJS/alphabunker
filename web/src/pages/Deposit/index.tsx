@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import { Modal } from '../../components/Modal';
+import { api } from '../../libs/api';
+
 /**
  * Archive: src/pages/Deposit.tsx
  *
@@ -9,5 +13,29 @@
  */
 
 export const Deposit = () => {
-  return <h1 className="text-white">Depósito</h1>;
+  const [modal, setModal] = useState(true);
+
+  async function handleDeposit() {
+    try {
+      const result = await api.post('deposit', {
+        agency: '',
+        account: '',
+        value: '',
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return (
+    <>
+      {modal && (
+        <Modal
+          title="Depósito"
+          setModal={setModal}
+          handleConfirmModal={handleDeposit}
+        />
+      )}
+    </>
+  );
 };
