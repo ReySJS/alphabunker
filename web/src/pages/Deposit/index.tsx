@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
 import { api } from '../../libs/api';
 
@@ -13,7 +14,7 @@ import { api } from '../../libs/api';
  */
 
 export const Deposit = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   async function handleDeposit() {
     try {
@@ -36,6 +37,23 @@ export const Deposit = () => {
           handleConfirmModal={handleDeposit}
         />
       )}
+      <div className="flex flex-col gap-5">
+        <Button
+          category="primary"
+          label="Abrir modal"
+          onClick={() => setModal(true)}
+        />
+        <Button
+          category="secondary"
+          label="Abrir modal"
+          onClick={() => setModal(true)}
+        />
+        <Button
+          category="cancel"
+          label="Abrir modal"
+          onClick={() => setModal(true)}
+        />
+      </div>
     </>
   );
 };

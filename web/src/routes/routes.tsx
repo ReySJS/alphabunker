@@ -28,7 +28,7 @@ const Public = ({ children }: ChildrenTypes) => {
   const { user } = useUser();
 
   if (user) {
-    return <Navigate to="/profile" />;
+    return <Navigate to="/deposit" />;
   }
 
   return children;

@@ -1,10 +1,10 @@
-import { X } from 'phosphor-react';
-import { MouseEvent, MouseEventHandler, useEffect, useRef } from 'react';
+import { MouseEventHandler } from 'react';
 
 interface PropTypes {
+  className?: string;
   category: 'primary' | 'secondary' | 'cancel';
   label: string;
-  type: 'button' | 'submit';
+  type?: 'button' | 'submit';
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -18,8 +18,18 @@ interface PropTypes {
  * Author: Rey
  */
 
-export const Button = ({ label, type, onClick, category }: PropTypes) => (
-  <button className={`h-10 px-3 text-btn-text rounded btn-${category}`} type={type} onClick={onClick}>
+export const Button = ({
+  className,
+  label,
+  type = 'button',
+  onClick,
+  category,
+}: PropTypes) => (
+  <button
+    className={`h-10 px-3 text-btn-text rounded btn-${category} ${className}`}
+    type={type}
+    onClick={onClick}
+  >
     {label}
   </button>
 );
