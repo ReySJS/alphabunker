@@ -8,7 +8,6 @@ import { Withdraw } from '../pages/Withdraw';
 
 
 export const Router = () => (
-  <BrowserRouter>
   <Routes>
     <Route path="/" element={<Navigate to="/home" />} />
     <Route path="/home" element={ <Home /> } />
@@ -19,5 +18,4 @@ export const Router = () => (
     <Route path="/withdraw" element={ <Withdraw /> } />
     
     </Routes>
-  </BrowserRouter>
 )

@@ -9,7 +9,9 @@ class Deposit {
 
     public async handle(req: Request, res: Response) {
         try{
-            res.send(await new DepositService(req.body).create())
+            const response = await new DepositService(req.body).create()
+            res.status(response.code)
+            res.send(response.data)
         }
         catch(err){
             const _resError: resError = err as resError;

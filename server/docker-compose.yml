@@ -3,7 +3,7 @@ version: "3.9"
 services:
   db:
     image: postgres:14
-    container_name: "bank-db"
+    container_name: "bank_db"
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
