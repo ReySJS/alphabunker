@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Header } from '../../components/Header';
 /**
  * Archive: src/pages/Extract.tsx
  *
@@ -14,5 +15,9 @@ export const Transaction = () => {
   const { transactionId } = useParams<Record<string, string | undefined>>();
   console.log(transactionId);
 
-  return <h1 className="text-white">Transação</h1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
