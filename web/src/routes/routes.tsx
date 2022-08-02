@@ -9,6 +9,8 @@ import { Deposit } from '../pages/Deposit';
 import { Withdraw } from '../pages/Withdraw';
 import { Profile } from '../pages/Profile';
 import { Transaction } from '../pages/Transaction';
+import { Login } from '../pages/Login';
+import { Register } from '../pages/Register';
 
 interface ChildrenTypes {
   children: ReactElement;
@@ -18,7 +20,7 @@ const Private = ({ children }: ChildrenTypes) => {
   const { user } = useUser();
 
   if (!user) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/" />;
   }
 
   return children;
@@ -27,8 +29,8 @@ const Private = ({ children }: ChildrenTypes) => {
 const Public = ({ children }: ChildrenTypes) => {
   const { user } = useUser();
 
-  if (user) {
-    return <Navigate to="/profile" />;
+  if (!user) {
+    return <Navigate to="/login" />;
   }
 
   return children;
@@ -42,6 +44,22 @@ export const Router = () => (
       element={
         <Public>
           <Home />
+        </Public>
+      }
+    />
+    <Route
+      path="/login"
+      element={
+        <Public>
+          <Login />
+        </Public>
+      }
+    />
+    <Route
+      path="/register"
+      element={
+        <Public>
+          <Register />
         </Public>
       }
     />
