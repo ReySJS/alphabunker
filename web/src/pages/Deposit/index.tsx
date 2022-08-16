@@ -37,7 +37,7 @@ export const Deposit = () => {
           handleConfirmModal={handleDeposit}
         />
       )}
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 border-input-border">
         <Button
           category="primary"
           label="Abrir modal"
